@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Login
+Route::group(['namespace' => 'App\Http\Controllers'], function () {
+    Route::get('login', ['uses' => 'HomeController@showLogin']);
+    Route::post('login', ['uses' => 'HomeController@doLogin']);
+    Route::get('logout', array('uses' => 'HomeController@doLogout'));
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
