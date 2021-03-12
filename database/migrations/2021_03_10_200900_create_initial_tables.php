@@ -47,7 +47,9 @@ class CreateInitialTables extends Migration
             $table->string('product_type');
             $table->unsignedSmallInteger('shipping_price');
             $table->text('note');
+
             $table->unsignedInteger('admin_id');
+            $table->index('admin_id');
         });
 
         Schema::create('inventory', function (Blueprint $table){

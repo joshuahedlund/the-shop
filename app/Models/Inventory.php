@@ -10,4 +10,8 @@ class Inventory extends Model
     use HasFactory;
 
     protected $table = 'inventory';
+
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

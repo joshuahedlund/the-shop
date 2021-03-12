@@ -1,31 +1,24 @@
-<!doctype html>
-<html>
-<head>
-    <title>Login | TheShop</title>
-</head>
-<body>
+<div class="container" style="background:#fff">
+
+    <h1>Welcome to TheShop</h1>
 
 <form method="post" action="/login">
-<h1>Login</h1>
+    @csrf
 
-<!-- if there are login errors, show them here -->
-<p>
-    {{ $errors->first('email') }}
-    {{ $errors->first('password') }}
-</p>
-
-<p>
+<div class="form-group">
     <label>Email Address</label>
-    <input name="email" type="text" />
-</p>
+    <input class="form-control" name="email" type="text" />
+</div>
 
-<p>
+<div class="form-group">
     <label>Password</label>
-    <input name="password" type="password" />
-</p>
+    <input class="form-control" name="password" type="password" />
+</div>
 
 <p>
-    <input type="submit" name="submit" value="Log In" />
+    <input class="btn btn-default" type="submit" name="submit" value="Log In" />
 </p>
 
 </form>
+
+</div>

@@ -51,4 +51,9 @@ class User extends Authenticatable
     {
         return $this->password_hash;
     }
+
+    public function product()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
