@@ -23,7 +23,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 //Invenory
 Route::group(['middleware' => ['auth'], 'namespace' => 'App\Http\Controllers'], function () {
     Route::get('inventory', ['uses' => 'InventoryController@index']);
-    Route::get('inventory/get', ['uses' => 'InventoryController@getInventory']);
+    Route::post('api/inventory', ['uses' => 'InventoryController@getInventory']);
 });
 
 Route::get('/', function () {

@@ -36,7 +36,10 @@ class CreateInitialTables extends Migration
 
         Schema::create('products', function (Blueprint $table){
             $table->increments('id');
+
             $table->string('product_name');
+            $table->index('product_name');
+
             $table->text('description');
             $table->text('style');
             $table->text('brand');
@@ -65,7 +68,10 @@ class CreateInitialTables extends Migration
             $table->unsignedMediumInteger('price_cents')->default(0);
             $table->unsignedMediumInteger('sale_price_cents')->default(0);
             $table->unsignedMediumInteger('cost_cents')->default(0);
+
             $table->string('sku');
+            $table->index('sku');
+
             $table->double('length')->default(0);
             $table->double('width')->default(0);
             $table->double('height')->default(0);
