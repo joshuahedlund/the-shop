@@ -11,6 +11,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 </head>
 <body style="background:#ccc" ng-app="myApp">
+@if(Auth::user())
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">TheShop</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('inventory.index') }}">Inventory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Orders</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+@endif
+
 
 <div class="container" style="background:#fff">
     @if(Auth::user())

@@ -32,9 +32,9 @@
         </thead>
         <tbody ng-repeat="i in inventory">
             <tr>
-                <td><%i.product_id%></td>
-                <td><%i.product_name%></td>
-                <td><%i.sku%></td>
+                <td><a href="/inventory/<%i.id%>" target="_blank"><%i.product_id%></a></td>
+                <td><a href="/inventory/<%i.id%>" target="_blank"><%i.product_name%></a></td>
+                <td><a href="/inventory/<%i.id%>" target="_blank"><%i.sku%></a></td>
                 <td class="text-right"><%i.quantity%></td>
                 <td><%i.color%></td>
                 <td><%i.size%></td>

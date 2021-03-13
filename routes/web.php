@@ -17,12 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('login', ['uses' => 'HomeController@showLogin', 'as' => 'login']);
     Route::post('login', ['uses' => 'HomeController@doLogin']);
-    Route::get('logout', array('uses' => 'HomeController@doLogout'));
+    Route::get('logout', ['uses' => 'HomeController@doLogout', 'as' => 'logout']);
 });
 
-//Invenory
+//Inventory
 Route::group(['middleware' => ['auth'], 'namespace' => 'App\Http\Controllers'], function () {
-    Route::get('inventory', ['uses' => 'InventoryController@index']);
+    Route::get('inventory', ['uses' => 'InventoryController@index', 'as' => 'inventory.index']);
+    Route::get('inventory/{id}', ['uses' => 'InventoryController@show', 'as' => 'inventory.show']);
+
     Route::post('api/inventory', ['uses' => 'InventoryController@getInventory']);
 });
 
