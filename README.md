@@ -34,8 +34,8 @@ Visit on `localhost:8000`
 
 ## TODO
 
-1) Get rid of that plaintext password field!
+1) Database: Get rid of that plaintext password field! Audit/Determine expected value ranges to optimize fields by size.
 
-2) Clean up UI.
+2) UI: Make prettier. Make sure responsive. Move inlines to JS / CSS (Sass) files.
 
-3) Develop product and order pages.
+3) Feature Roadmap: Develop product and order pages.
